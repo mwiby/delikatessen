@@ -40,7 +40,7 @@ function Popular() {
             
             <Splide
               options={{
-              perPage: 3,
+              perPage: 4,
               arrows: false,
               pagination: false,
               drag: "free",
