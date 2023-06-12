@@ -24,6 +24,7 @@ function Popular() {
       const api = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=8`);
       
       const data = await api.json();
+      
       localStorage.setItem("popular",JSON.stringify(data.recipes));
       setPopular(data.recipes)
      
@@ -40,7 +41,7 @@ function Popular() {
             
             <Splide
               options={{
-              perPage: 4,
+              perPage: 3,
               arrows: false,
               pagination: false,
               drag: "free",
@@ -73,7 +74,7 @@ const Wrapper = styled.div`
 
 const Card = styled.div`
   min-height: 25rem;
-  border-radius: 2rem;
+  border-radius: 1.1rem;
   overflow: hidden;
   position: relative;
 
