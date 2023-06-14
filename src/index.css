@@ -21,7 +21,7 @@ code {
     monospace;
 }
 
-h4{
+h4 { 
   font-size: 1rem;
   color: rgb(56, 56,56);
 
@@ -34,6 +34,6 @@ h3 {
   margin: 2rem 0rem;
 }
 
-a{
-  color: rgb(56,56,56)
+a {
+  color: rgb(56, 56, 56);
 }
