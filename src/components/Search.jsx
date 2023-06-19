@@ -4,11 +4,22 @@ import {FaSearch} from 'react-icons/fa'
 
 
 function Search() {
+
+    const [input,setInput] = useState("");
+
+
+
+
+
   return (
     <FormStyle>
         <div>
             <FaSearch />
-            <input type="text" />
+            <input 
+            type="text" 
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            />
         </div>
     </FormStyle>
   )
