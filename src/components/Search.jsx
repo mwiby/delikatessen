@@ -30,6 +30,7 @@ const FormStyle = styled.form`
     margin: 0rem 20rem;
 
     div {
+        margin-top: 2.5rem;
         width: 100%;
         position: relative;
     }
