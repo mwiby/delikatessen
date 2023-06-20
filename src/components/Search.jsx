@@ -7,12 +7,15 @@ function Search() {
 
     const [input,setInput] = useState("");
 
-
+    const submitHandler = (e) => {
+        e.preventDefault();
+        
+    }
 
 
 
   return (
-    <FormStyle>
+    <FormStyle onSubmit={submitHandler}>
         <div>
             <FaSearch />
             <input 
