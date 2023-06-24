@@ -27,7 +27,7 @@ function Searched() {
             {searchedRecipes.map((item) => {
                 return(
                     <Card key={item.id}>
-                        <img src="{item.image" alt="" />
+                        <img src={item.image} alt="" />
                         <h4>{item.title}</h4>
                     </Card>
                 )
