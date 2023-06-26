@@ -10,9 +10,6 @@ function Recipe() {
   const [activeTab, setActiveTab] = useState("instructions");
 
 
-  useEffect(() => {
-    FetchDetails();
-  },[params.name]);
 
   const FetchDetails = async () => {
 
@@ -21,7 +18,13 @@ function Recipe() {
 
     setDetails(detailData);
     console.log(detailData);
+    console.log("d: " + details)
   }
+
+  useEffect(() => {
+    FetchDetails();
+  },[params.name]);
+
 
 
   return (
@@ -47,6 +50,17 @@ function Recipe() {
                 <h3 dangerouslySetInnerHTML={{ __html: details.summary }}></h3>
                 <h3 dangerouslySetInnerHTML={{ __html: details.instructions }}></h3>
             </div>
+            <ul>
+                {details.extendedIngredients.map((ingredient) => {
+                  
+                
+                  <li key={ingredient.id}>
+                        {ingredient.original}
+                  
+                  </li>
+                   
+                })}
+            </ul>
         </Info>
     </DetailWrapper>
   )
